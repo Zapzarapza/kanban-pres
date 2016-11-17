@@ -1,38 +1,93 @@
-\documentclass[12pt]{article}
+\documentclass[12pt]{scrartcl}
 
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage{graphicx}
+\usepackage{color}
+\usepackage{csquotes}
+
+\setlength\parindent{0pt}
+
 
 %opening
 \title{Software Kanban}
+\subtitle{A Visual Process-Management System for Software Development}
 \author{Marko Oreskovic, Kevin Rabe, Andreas Ohmer,\\ Sebastian Müller \& Alexander Tkachov}
 \date{}
 
 \usepackage{blindtext}
 
+% show only parts, chapters and sections in table of contents
+\setcounter{tocdepth}{1}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%\renewcommand{\familydefault}{\sfdefault}
+
+
 \begin{document}
 
 	\maketitle
-	
-	\vspace*{0.5cm}
-
+		
 	\tableofcontents
 	\newpage
 	
-	\section{Origin of Name}
-	\blindtext
+	\section{What is Kanban?}
+		Software Kanban is a process-management system in software development which originated in the japanese automobile industry in the 50s. Usually a Kanban-Board is used for a visual {\color{red}presentation (besseres Wort??)}.
+		
+		\vspace{0.5cm}
+		
+		\begin{displayquote}
+			\textit{Kanban is giving people permission to think for themselves. It is giving people permission to be different: different from the team across the floor, on the next floor, in the next building, and at a neighboring firm. It is giving people permission to deviate from the textbook.} 
+		\end{displayquote}
+		\hfill - David J. Anderson
+	
+	\section{History of Kanban}
+	
 	
 	\section{Kanban outside of Software Development}
-	\blindtext
+	
 	
 	\section{Kanban in Software Development}
-	\blindtext
 	
-	\section{Variations of Kanban}
-	\blindtext
 	
-	\section{Pros and Cons of Kanban}
-	\blindtext
+	\section{The Kanban-Board}
+	
+	\newpage
+	
+	\section{Benefits of Kanban}
+		\subsection{Transparency}
+			Everyone has the same amount of information and is able to see at all times the current progress of the project, the individual tasks and the activities of the team members, making questions like "What is the status of \textit{xyz}?", "What is \textit{Person A} currently doing?" etc. redundant. This saves time for everyone and reduces the amount of miscommunication which could occur.
+		
+		\subsection{Benefits of the \textit{Pull}} 
+			Instead of having a manager \textit{pushing} tasks to the team members, they \textit{pull} the tasks themselves. This has multiple benefits:
+			
+			\bi
+				\item Because the team members decide themselves on which task the want to work, they will choose the task they are most confident to solve. This results in a efficient distribution of the skills of the various team members {\color{red} among} the tasks.
+				\item Teams only pull tasks when they are done with their current task. This way future tasks do not get delayed when they miss the deadline of their current task. This could happen when a team runs into technical difficulties, which were not identified during the risk management, or when team members are temporarily not able to participate on the project (eg. because of illness.) As a result bottlenecks, where others have to wait for the late team, can be avoided and less time is wasted.
+				\item If a team finishes its task earlier than expected, they can just pull the next available task instead of having to wait. This, again, reduces the waste of time.
+						
+			\ei
+			
+			However, having no deadline has also its risks: Because the team members are responsible for their own pace of work and there is no pressure from above in this matter, the development time can get high, if the team members decide to not work hard. \\
+			
+			This means, if you consider to introduce Software Kanban to your team, you have wo make sure, that your team is trustworthy and self-motivated, otherwise the risk mentioned above could occur.
+			
+		\subsection{Ease of Use}
+		
+		\subsection{Motivation}
+		
+		
+	\newpage
+			
+	\section{\color{red}Conclusion (vielleicht?)}
+		
+	\section{Sources}
+		\bi
+			\item Epping, Thomas: \textit{Kanban für die Softwareentwicklung.} Springer-Verlag 2011
+				
+		\ei
+		
 
 \end{document}
