@@ -3,7 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage{graphicx}
-\usepackage{color}
+\usepackage{xcolor}
 \usepackage{csquotes}
 
 \setlength\parindent{0pt}
@@ -22,6 +22,9 @@
 
 \newcommand{\bi}{\begin{itemize}}
 \newcommand{\ei}{\end{itemize}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
 
 %\renewcommand{\familydefault}{\sfdefault}
 
@@ -58,25 +61,50 @@
 	
 	\section{Benefits of Kanban}
 		\subsection{Transparency}
-			Everyone has the same amount of information and is able to see at all times the current progress of the project, the individual tasks and the activities of the team members, making questions like "What is the status of \textit{xyz}?", "What is \textit{Person A} currently doing?" etc. redundant. This saves time for everyone and reduces the amount of miscommunication which could occur.
+			Everyone has the same amount of information and is able to see at all times the current progress of the project, the individual tasks and the activities of the team members, making questions like "What is the status of \textit{xyz}?", "What is \textit{Person A} currently doing?" etc. {\color{red}redundant}. This saves time for everyone and reduces the amount of miscommunication which could occur. \\
+			
+			Another positive aspect is that stand-ups/meetings become more efficient because less time has to be used to get everyone on the current status of the project.
+			
+		\subsection{Ease of Use}
+			Kanban-Boards are pretty self-explanatory, only some minor details need to be explained to a beginner. They are also often implemented with physical tools, like a whiteboard or a pinboard. This makes the overall use of it easier, compared to a software implementation on a computer, because there is no knowledge required to open/read/edit a Kanban-Board. Using physical tools also means a higher flexibility because you are not restricted by the capabilities/features of a software application.
+			
+			
+		\subsection{Limits}
+			The use of limits in each section of a Kanban-Board has two benefits:
+			
+			\be
+				\item Limiting the amount of work one team member can do means that he is only allowed to work at one task/a few number of tasks at the same time. This requires the individual to focus one the work he is currently doing and it reduces the amount of distractions.
+				\item Limits prevent a build-up of a backlog for the team members who work on the later parts of the work chain {\color{red} Begründung hinzufügen!!!}
+			\ee
+			
 		
 		\subsection{Benefits of the \textit{Pull}} 
 			Instead of having a manager \textit{pushing} tasks to the team members, they \textit{pull} the tasks themselves. This has multiple benefits:
 			
 			\bi
-				\item Because the team members decide themselves on which task the want to work, they will choose the task they are most confident to solve. This results in a efficient distribution of the skills of the various team members {\color{red} among} the tasks.
+				\item Because the team members decide themselves on which task the want to work, they could choose the task they are most confident to solve. This results in a efficient distribution of the skills of the various team members {\color{red} among} the tasks.
+				\item Instead of pulling the task they are most most confident to solve because of their experience, they could pull a task they are less familiar with. The possible benefits of this will be discussed in a later section.
 				\item Teams only pull tasks when they are done with their current task. This way future tasks do not get delayed when they miss the deadline of their current task. This could happen when a team runs into technical difficulties, which were not identified during the risk management, or when team members are temporarily not able to participate on the project (eg. because of illness.) As a result bottlenecks, where others have to wait for the late team, can be avoided and less time is wasted.
 				\item If a team finishes its task earlier than expected, they can just pull the next available task instead of having to wait. This, again, reduces the waste of time.
 						
 			\ei
 			
-			However, having no deadline has also its risks: Because the team members are responsible for their own pace of work and there is no pressure from above in this matter, the development time can get high, if the team members decide to not work hard. \\
+			However, having no deadline has also its risks: Because the team members are responsible for their own pace of work and there is no pressure from above in this matter, the development time can get high, if the team members decide not to work hard. \\
 			
-			This means, if you consider to introduce Software Kanban to your team, you have wo make sure, that your team is trustworthy and self-motivated, otherwise the risk mentioned above could occur.
+			This means, if you consider introducing Software Kanban to your team, you have wo make sure, that your team is trustworthy and self-motivated, otherwise you might have to face the above mentioned risk.
 			
-		\subsection{Ease of Use}
-		
 		\subsection{Motivation}
+			The use of Kanban could have the following benefits in regards of the motivation on the team:
+			
+			\bi
+				\item Giving the the team members the freedom of choice by pulling their own tasks raises the morale because the members do not get the feeling of doing something just because someone else told them to do it. Choosing the next task becomes a personal choice.
+				\item The team members can decide whether they want to pull a task which requires experience they already own, resulting in a higher quality of the end-product, or working on a task they are less familiar with, resulting in widening their experience and acquiring new skills.
+				\item Another motivation-rising aspect of Kanban is the Kanban-Board: Team members can literally see how the backlog and the to-do-section are shrinking, the done-section is rising and the individual task are moving from left to the right on the Kanban-Board. This gives a sense of progress and accomplishment.
+				
+			\ei
+			
+		
+		
 		
 		
 	\newpage
