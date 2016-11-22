@@ -1,6 +1,7 @@
-\documentclass[14pt,t]{beamer}
+\documentclass[12pt]{beamer}
 
 \usepackage{darkdefault}
+%\usetheme{Singapore}
 
 % no pagenumbers
 \pagenumbering{gobble}
@@ -9,6 +10,14 @@
 \usepackage[english]{babel}
 \usepackage{graphicx}
 \usepackage{hyperref}
+
+\usepackage{caption}
+\renewcommand{\figurename}{FIGURE}
+\captionsetup[figure]{labelfont={color=hilight}}
+
+\hypersetup{colorlinks,linkcolor=hilight, urlcolor=lolight}
+
+\newcommand{\src}[2]{\href{#1}{\color{lolight}#2}}
 
 
 % hide text when using \pause
@@ -19,19 +28,114 @@
 \subtitle{A Visual Process-Managment System for Software Development}
 \author{{\footnotesize Marko Oreskovic, Kevin Rabe, Andreas Ohmer,\\ Sebastian Müller \& Alexander Tkachov}}
 \institute{Frankfurt University of Applied Sciences}
-\date{\small 17th November 2016}
+\date{\small 24th November 2016}
+
+
+% a few macros
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\newcommand{\ig}{\includegraphics}
+\newcommand{\subt}[1]{{\scriptsize \color{subtitle} {#1}}}
 
 
 \begin{document}
+	
 	\maketitle
 	
 	\begin{frame}{Table of Contents}
 		\tableofcontents[hideallsubsections]
 	\end{frame}
 	
-	\section{First section}
-		\begin{frame}{\secname}
-			Test Frame
+	
+		
+		
+	\section{General Overview}
+	 
+		\begin{frame}{What is Kanban?}{General Overview}
+			\bi
+				\item process-management system in software
+				\item invented in Japan in the 50s
+				\item visualised with a Kanban-Board
+			\ei
+			
+			{\color{orange}Vielleicht mehr Zeug einfügen?}
 		\end{frame}
+		
+		
+	\section{History of Kanban}
+	
+		\begin{frame}{\secname}
+			\begin{figure}
+				\ig[scale=0.55]{pictures/YesWeKanban.jpg}
+				\caption{Taiichi Ohno, father of Kanban}
+			\end{figure}
+			\subt{Source: \src{https://www.limitedwip.org}{Limited WIP Society}}
+		\end{frame}
+		
+	\section{Kanban outside of Software Development}
+	
+	\section{Kanban in Software Development}
+	
+		\begin{frame}{\secname}
+			\begin{figure}
+				\ig[scale=0.4]{pictures/agile_lean.png}
+				\caption{Kanban has elements of agile and lean SWE}
+			\end{figure}
+		\end{frame}
+		
+	\section{The Kanban-Board}
+	
+		\begin{frame}{\secname}{Variations}
+			\begin{figure}
+				\ig[scale=0.1]{pictures/board_simple}
+				\caption{A very basic Kanban-Board}
+			\end{figure}
+			\subt{Source: \src{https://upload.wikimedia.org/wikipedia/commons/d/d3/Simple-kanban-board-.jpg}{Wikipedia}}
+		\end{frame}
+	
+		\begin{frame}{\secname}{Variations}
+			\begin{figure}
+				\ig[scale=0.21]{pictures/var1.png}
+				\caption{Kanban-Board with more sections}
+			\end{figure}
+			\subt{Source: \url{https://www.youtube.com/watch?v=ndWPFk7GR8k}}
+		\end{frame}
+		
+		\begin{frame}{\secname}{Variations}
+			\begin{figure}
+				\ig[scale=0.2]{pictures/var2}
+				\caption{Same Kanban-Board in Action}
+			\end{figure}
+			\subt{Source: \url{https://www.youtube.com/watch?v=ndWPFk7GR8k}}
+		\end{frame}
+		
+		\begin{frame}{\secname}{Variations}
+			\begin{figure}
+				\ig[scale=0.21]{pictures/var3}
+				\caption{Kanban-Board with limits}
+			\end{figure}
+			\subt{Source: \url{https://www.youtube.com/watch?v=ndWPFk7GR8k}}
+		\end{frame}
+		
+	\section{Benefits of Kanban}
+	
+	
+	
+		\begin{frame}{Conclusion}
+			Kanban is \\
+			
+			\bi
+				\item easy to learn
+				\item versatile
+			\ei
+			
+			{\color{orange}Mehr Zeug einfügen!!!}
+		\end{frame}
+	
+		
 	
 \end{document}
