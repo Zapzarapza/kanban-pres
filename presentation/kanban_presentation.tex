@@ -10,7 +10,9 @@
 \usepackage[english]{babel}
 \usepackage{graphicx}
 \usepackage{hyperref}
-\usepackage{genealogytree} % for \textborn and \texdied
+\usepackage{amssymb} % for checkmarks
+\usepackage{array}
+\usepackage{makecell}
 
 \usepackage{caption}
 \renewcommand{\figurename}{FIGURE}
@@ -42,6 +44,10 @@
 \newcommand{\ig}{\includegraphics}
 \newcommand{\subt}[1]{{\scriptsize \color{subtitle} {#1}}}
 
+\newcommand{\tick}{\checkmark}
+\newcommand{\dash}{--}
+
+%\renewcommand{\arraystretch}{1.5}
 
 \begin{document}
 	
@@ -126,9 +132,66 @@
 		\begin{frame}{\secname}
 			\begin{figure}
 				\ig[scale=0.4]{pictures/agile_lean.png}
-				\caption{Kanban has elements of agile and lean SWE}
+				\caption{Kanban has elements of Agile and Lean SWE}
 			\end{figure}
 		\end{frame}
+		
+		\begin{frame}{\secname}{Agile Software Engineering}
+			Values:
+			\bi
+				\item Individuals and interactions over processes and tools
+				\item Working software over comprehensive documentation
+				\item Customer collaboration over contract negotiation
+				\item Responding to change over following a plan
+			\ei
+		\end{frame}
+		
+		\begin{frame}{\secname}{Agile Software Engineering}
+			\begin{figure}					
+%				\begin{tabular}{m{2.3cm}  m{0.6cm} m{1.5cm} m{2.1cm} m{2.3cm}}
+				\renewcommand{\arraystretch}{2}
+				\begin{tabular}{c|cccc}
+					& Pull & \makecell{Limited \\Tasks} & \makecell{Transp. \\ Information} & \makecell{Cont. \\ Improvement} \\ \hline
+					\makecell{Individuals \& \\ Interactions} & \tick & \dash & \tick & \tick \\ \hline
+					\makecell{Working \\Software} & \dash & \dash & \dash & \tick \\ \hline
+					\makecell{Customer \\ Collaboration} & \dash & \dash & \dash & \dash \\ \hline
+					\makecell{Responding \\to Change} & \tick & \tick & \tick & \tick \\					
+				\end{tabular}
+				\caption{Values of Agile SWE and Kanban}
+			\end{figure}
+		\end{frame}
+		
+		\begin{frame}{\secname}{Lean Software Engineering}
+			Values:
+			\bi
+				\item Estimate Waste
+				\item Amplify Learning
+				\item Decide as late as possible
+				\item Deliver as fast as possible
+				\item Empower the Team
+				\item Build Integrity in
+				\item See the whole
+			\ei
+		\end{frame}
+		
+		\begin{frame}{\secname}{Lean Software Engineering}
+			\begin{figure}					
+				%				\begin{tabular}{m{2.3cm}  m{0.6cm} m{1.5cm} m{2.1cm} m{2.3cm}}
+				\renewcommand{\arraystretch}{1.3}
+				\begin{tabular}{c|cccc}
+					& Pull & \makecell{Limited \\Tasks} & \makecell{Transp. \\ Information} & \makecell{Cont. \\ Improv.} \\ \hline	
+					\makecell{Eliminate Waste}  & \tick & \tick & \tick & \tick \\ \hline	
+					\makecell{Amplify Learning} & \tick & \tick & \tick & \tick \\ \hline
+					\makecell{Decide as Late \\ as Possible} & \tick & \tick & \tick & \dash \\ \hline
+					\makecell{Deliver as Fast \\ as Possible} & \tick & \tick & \tick & \dash \\ \hline
+					\makecell{Empower the Team} & \tick & \dash & \tick & \tick \\ \hline
+					\makecell{Build Integrity in} & \dash & \dash & \tick & \tick \\ \hline
+					\makecell{See the Whole} & \dash & \dash & \dash & \tick
+				\end{tabular}
+				\caption{Values of Lean SWE and Kanban}
+			\end{figure}
+		\end{frame}
+		
 		
 	\section{The Kanban-Board}
 	
