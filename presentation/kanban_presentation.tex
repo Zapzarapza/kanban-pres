@@ -10,6 +10,7 @@
 \usepackage[english]{babel}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{genealogytree} % for \textborn and \texdied
 
 \usepackage{caption}
 \renewcommand{\figurename}{FIGURE}
@@ -53,27 +54,69 @@
 	
 		
 		
-	\section{General Overview}
-	 
-		\begin{frame}{What is Kanban?}{General Overview}
-			\bi
-				\item process-management system in software
-				\item invented in Japan in the 50s
-				\item visualised with a Kanban-Board
-			\ei
-			
-			{\color{orange}Vielleicht mehr Zeug einfügen?}
-		\end{frame}
+%	\section{General Overview}
+%	 
+%		\begin{frame}{What is Kanban?}{General Overview}
+%			\bi
+%				\item process-management system in software
+%				\item invented in Japan in the 50s
+%				\item visualised with a Kanban-Board
+%			\ei
+%			
+%			{\color{orange}Vielleicht mehr Zeug einfügen?}
+%		\end{frame}
 		
 		
 	\section{History of Kanban}
 	
-		\begin{frame}{\secname}
+%		\begin{frame}{\secname}
+%			\begin{figure}
+%				\ig[scale=0.55]{pictures/YesWeKanban.jpg}
+%				\caption{Taiichi Ohno, father of Kanban}
+%			\end{figure}
+%			\subt{Source: \src{https://www.limitedwip.org}{Limited WIP Society}}
+%		\end{frame}
+
+		\begin{frame}{\secname}{General Information}
+			\bi
+				\item Kanban = signboard
+				\item Developed by Taiichi Ohno in 1947
+				\item Worked for Toyota
+				\item Scheduling system for lean manufacturing and just-in-time manufacturing
+			\ei
+		\end{frame}
+		
+		\begin{frame}{\secname}{Taiichi Ohno}
 			\begin{figure}
-				\ig[scale=0.55]{pictures/YesWeKanban.jpg}
-				\caption{Taiichi Ohno, father of Kanban}
+				\ig[scale=0.8]{pictures/taiichi}
+				\caption{Taiichi Ohno, father of Kanban (1912 - 1990)}
 			\end{figure}
-			\subt{Source: \src{https://www.limitedwip.org}{Limited WIP Society}}
+		\end{frame}
+		
+		\begin{frame}{\secname}{Goals and Reasons}
+			Reasons:
+			\bi
+				\item Too high storage cost
+				\item Too little productivity
+				\item Increasing customer requirements
+			\ei
+			
+			\vspace{0.5cm}
+			\pause
+			
+			Goal:
+			\bi
+				\item Steady flow in the production process \\ $\Rightarrow$ less inventory needed
+			\ei
+		\end{frame}
+		
+		\begin{frame}{\secname}{Kanban in SWE}
+			\bi
+				\item First use in 2004 by Microsoft
+				\item Lean Software Development
+				\item First public presentation in 2007 by David J. Anderson
+				\item Anderson: Father of Software Kanban
+			\ei
 		\end{frame}
 		
 	\section{Kanban outside of Software Development}
@@ -91,34 +134,58 @@
 	
 		\begin{frame}{\secname}{Variations}
 			\begin{figure}
-				\ig[scale=0.1]{pictures/board_simple}
+				\ig[scale=0.11]{pictures/board_simple}
 				\caption{A very basic Kanban-Board}
 			\end{figure}
-			\subt{Source: \src{https://upload.wikimedia.org/wikipedia/commons/d/d3/Simple-kanban-board-.jpg}{Wikipedia}}
+%			\subt{Source: \src{https://upload.wikimedia.org/wikipedia/commons/d/d3/Simple-kanban-board-.jpg}{Wikipedia}}
 		\end{frame}
 	
 		\begin{frame}{\secname}{Variations}
 			\begin{figure}
-				\ig[scale=0.21]{pictures/var1.png}
+				\ig[scale=0.25]{pictures/var1.png}
 				\caption{Kanban-Board with more sections}
 			\end{figure}
-			\subt{Source: \url{https://www.youtube.com/watch?v=ndWPFk7GR8k}}
+%			\subt{Source: \url{https://www.youtube.com/watch?v=ndWPFk7GR8k}}
 		\end{frame}
 		
 		\begin{frame}{\secname}{Variations}
 			\begin{figure}
-				\ig[scale=0.2]{pictures/var2}
+				\ig[scale=0.25]{pictures/var2}
 				\caption{Same Kanban-Board in Action}
 			\end{figure}
-			\subt{Source: \url{https://www.youtube.com/watch?v=ndWPFk7GR8k}}
+%			\subt{Source: \url{https://www.youtube.com/watch?v=ndWPFk7GR8k}}
 		\end{frame}
 		
 		\begin{frame}{\secname}{Variations}
 			\begin{figure}
-				\ig[scale=0.21]{pictures/var3}
+				\ig[scale=0.28]{pictures/var3}
 				\caption{Kanban-Board with limits}
 			\end{figure}
-			\subt{Source: \url{https://www.youtube.com/watch?v=ndWPFk7GR8k}}
+%			\subt{Source: \url{https://www.youtube.com/watch?v=ndWPFk7GR8k}}
+		\end{frame}
+		
+		\begin{frame}{\secname}{Other useful Information}
+			\begin{figure}
+				\ig[scale=0.29]{pictures/Durchsatz}
+				\caption{Throughput}
+			\end{figure}
+%			\subt{Source: \url{https://www.youtube.com/watch?v=ndWPFk7GR8k}}
+		\end{frame}
+		
+		\begin{frame}{\secname}{Other useful Information}
+			\begin{figure}
+				\ig[scale=0.26]{pictures/Durchlaufzeit}
+				\caption{Cycle Time}
+			\end{figure}
+%			\subt{Source: \url{https://www.youtube.com/watch?v=ndWPFk7GR8k}}
+		\end{frame}
+		
+		\begin{frame}{\secname}{Other useful Information}
+			\begin{figure}
+				\ig[scale=0.3]{pictures/Fehlerrate}
+				\caption{Rate of Errors}
+			\end{figure}
+%			\subt{Source: \url{https://www.youtube.com/watch?v=ndWPFk7GR8k}}
 		\end{frame}
 		
 	\section{Benefits of Kanban}
@@ -134,6 +201,15 @@
 			\ei
 			
 			{\color{orange}Mehr Zeug einfügen!!!}
+		\end{frame}
+		
+		
+		\begin{frame}{Sources}
+			\bi
+				\item Epping, Thomas: \textit{Kanban für die Softwareentwicklung.} Springer-Verlag 2011
+				\item \url{https://www.youtube.com/watch?v=ndWPFk7GR8k}
+				\item \href{https://upload.wikimedia.org/wikipedia/commons/d/d3/Simple-kanban-board-.jpg}{Wikimedia}
+			\ei
 		\end{frame}
 	
 		
